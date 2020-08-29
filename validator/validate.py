@@ -1,8 +1,9 @@
 import json
 import typing as t
 
-import typeguard
 from typeguard import check_type
+
+
 REQUIRED_FIELDS = {"timestamp", "buffer", "cursor_position", "visual_selection"}
 
 Position = t.Tuple[int, int] # (line_number, char_number)
@@ -12,6 +13,7 @@ FIELD_TYPES = {
     "cursor_position": Position,
     "visual_selection": t.List[Position]
 }
+
 
 def _check_type(object, type):
     try:
