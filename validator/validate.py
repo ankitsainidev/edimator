@@ -14,7 +14,6 @@ FIELD_TYPES = {
     "visual_selection": t.List[Position]
 }
 
-
 def _check_type(object, type):
     try:
         check_type('_', object, type)
